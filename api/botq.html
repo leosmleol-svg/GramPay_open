@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UserArgrement</title>
+    <style>
+        /* Минимум стилей — только для читаемости */
+        body {
+            background: #fff;
+            margin: 20px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        pre {
+            white-space: pre-wrap;
+            word-break: break-word;
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0;
+            padding: 10px;
+            background: #f8f8f8;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .info {
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        .error {
+            color: #b13e3e;
+            background: #fdd;
+            padding: 10px;
+            border: 1px solid #b13e3e;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="info">
+        <strong>Файл:</strong> <span id="fileName">example.txt</span>
+        <span style="margin-left: 20px;" id="fileStatus">Загрузка...</span>
+    </div>
+
+    <pre id="content">Загрузка...</pre>
+
+    <script>
+        // ================================================================
+        //  ★★★ УКАЖИТЕ ИМЯ ВАШЕГО TXT-ФАЙЛА ЗДЕСЬ ★★★
+        // ================================================================
+        const TXT_FILE = "botq.txt";   // <-- поменяйте на свой файл
+        // ================================================================
+
+        const content = document.getElementById('content');
+        const fileName = document.getElementById('fileName');
+        const fileStatus = document.getElementById('fileStatus');
+
+        fileName.textContent = TXT_FILE;
+
+        fetch(TXT_FILE)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status} — ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(text => {
+                // Убираем BOM, если есть
+                if (text.charCodeAt(0) === 0xFEFF) {
+                    text = text.slice(1);
+                }
+                content.textContent = text;
+                fileStatus.textContent = 'load';
+                fileStatus.style.color = '#1d6b47';
+            })
+            .catch(error => {
+                content.textContent = '';
+                fileStatus.textContent = '❌ Ошибка';
+                fileStatus.style.color = '#b13e3e';
+
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'error';
+                errorDiv.textContent = `Не удалось загрузить «${TXT_FILE}»: ${error.message}`;
+                content.appendChild(errorDiv);
+            });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /data/
+Disallow: /tmp/
+Disallow: /logs/
+Disallow: /administrator/
+Sitemap: https://grampay.net/sitemap.xml
