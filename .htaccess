@@ -1,0 +1,4 @@
+# Do not serve legacy SMTP environment files as static content.
+<FilesMatch "^\.env($|\.)">
+    Require all denied
+</FilesMatch>

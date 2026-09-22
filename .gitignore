@@ -1,0 +1,5 @@
+.env
+.env.*
+!.env.example
+/grampay-mail.php
+/config/mail.local.php
