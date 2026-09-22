@@ -46,7 +46,7 @@ foreach ($transactions as $tx) {
 <html lang="ru" data-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  viewport-fit=cover">
     <title>GRAMPAY — Личный кабинет</title>
 
     <script>
@@ -146,12 +146,12 @@ foreach ($transactions as $tx) {
         }
 
         .brand-name { font-size:18px; font-weight:900; letter-spacing:-.4px; }
-        .brand-subtitle { display:block; color:var(--muted); font-size:9px; font-weight:700; letter-spacing:1px; }
+        .brand-subtitle { display:block; color:var(--muted); font-size:14px; font-weight:700; letter-spacing:1px; }
 
         .nav-label {
             padding:8px 10px;
             color:var(--muted);
-            font-size:9px;
+            font-size:14px;
             font-weight:850;
             text-transform:uppercase;
             letter-spacing:1.3px;
@@ -236,10 +236,10 @@ foreach ($transactions as $tx) {
             background:radial-gradient(circle,rgba(34,211,238,.18),transparent 70%);
         }
 
-        .hero-label { color:var(--muted); font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:1px; }
+        .hero-label { color:var(--muted); font-size:14px; font-weight:800; text-transform:uppercase; letter-spacing:1px; }
         .balance { margin-top:8px; font-size:clamp(38px,4vw,54px); line-height:1; font-weight:900; letter-spacing:-2px; }
         .balance small { font-size:17px; color:var(--muted); letter-spacing:0; }
-        .hero-meta { display:flex; align-items:center; gap:8px; margin-top:13px; color:var(--secondary); font-size:11px; }
+        .hero-meta { display:flex; align-items:center; gap:8px; margin-top:13px; color:var(--secondary); font-size:14px; }
         .online-dot { width:8px; height:8px; border-radius:50%; background:var(--green); box-shadow:0 0 0 5px rgba(52,211,153,.10); }
 
         .hero-button {
@@ -252,7 +252,7 @@ foreach ($transactions as $tx) {
             border-radius:12px;
             color:#fff;
             background:linear-gradient(135deg,#6366f1,#4f46e5);
-            font-size:11px;
+            font-size:14px;
             font-weight:800;
             text-decoration:none;
             box-shadow:0 12px 28px rgba(79,70,229,.27);
@@ -261,7 +261,7 @@ foreach ($transactions as $tx) {
         .stats { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:14px; }
         .stat { padding:17px; border:1px solid var(--border); border-radius:17px; background:var(--surface); backdrop-filter:blur(20px); }
         .stat-icon { width:36px; height:36px; display:flex; align-items:center; justify-content:center; border-radius:11px; background:var(--surface2); color:#a5b4fc; }
-        .stat-label { margin-top:13px; color:var(--muted); font-size:10px; font-weight:800; }
+        .stat-label { margin-top:13px; color:var(--muted); font-size:14px; font-weight:800; }
         .stat-value { margin-top:3px; font-size:21px; font-weight:900; }
 
         .card {
@@ -279,7 +279,7 @@ foreach ($transactions as $tx) {
         .title-icon { width:34px; height:34px; display:flex; align-items:center; justify-content:center; border-radius:10px; background:rgba(99,102,241,.12); color:#a5b4fc; }
         .card-body-custom { padding:21px; }
 
-        .form-label-custom { margin-bottom:7px; color:var(--secondary); font-size:10px; font-weight:800; }
+        .form-label-custom { margin-bottom:7px; color:var(--secondary); font-size:14px; font-weight:800; }
         .form-control,.form-select { min-height:48px; border:1px solid var(--border)!important; border-radius:12px!important; color:var(--text)!important; background:rgba(0,0,0,.16)!important; box-shadow:none!important; }
         :root[data-theme="light"] .form-control,:root[data-theme="light"] .form-select { background:rgba(255,255,255,.65)!important; }
         .form-control:focus,.form-select:focus { border-color:rgba(99,102,241,.65)!important; box-shadow:0 0 0 4px rgba(99,102,241,.09)!important; }
@@ -290,13 +290,13 @@ foreach ($transactions as $tx) {
 
         .transactions-wrap { overflow-x:auto; }
         .transactions { width:100%; min-width:560px; border-collapse:collapse; }
-        .transactions th { padding:12px 18px; text-align:left; color:var(--muted); font-size:9px; letter-spacing:.9px; text-transform:uppercase; border-bottom:1px solid var(--border); }
-        .transactions td { padding:14px 18px; color:var(--secondary); font-size:11px; border-bottom:1px solid var(--border); }
+        .transactions th { padding:12px 18px; text-align:left; color:var(--muted); font-size:14px; letter-spacing:.9px; text-transform:uppercase; border-bottom:1px solid var(--border); }
+        .transactions td { padding:14px 18px; color:var(--secondary); font-size:14px; border-bottom:1px solid var(--border); }
         .transactions tr:last-child td { border-bottom:0; }
         .transactions tbody tr:hover { background:rgba(255,255,255,.025); }
         .amount { color:var(--text)!important; font-weight:800; }
 
-        .status { display:inline-flex; align-items:center; gap:6px; padding:6px 9px; border-radius:8px; font-size:9px; font-weight:850; }
+        .status { display:inline-flex; align-items:center; gap:6px; padding:6px 9px; border-radius:8px; font-size:14px; font-weight:850; }
         .status-paid { color:#6ee7b7; background:rgba(16,185,129,.09); border:1px solid rgba(16,185,129,.17); }
         .status-failed { color:#fda4af; background:rgba(244,63,94,.09); border:1px solid rgba(244,63,94,.17); }
 
@@ -304,23 +304,23 @@ foreach ($transactions as $tx) {
         .verification-box.success { border-color:rgba(52,211,153,.20); background:rgba(52,211,153,.045); }
         .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:16px; }
         .step { padding:13px; border:1px solid var(--border); border-radius:12px; background:var(--surface2); }
-        .step-num { width:25px; height:25px; display:flex; align-items:center; justify-content:center; border-radius:8px; background:rgba(99,102,241,.13); color:#a5b4fc; font-size:9px; font-weight:900; margin-bottom:8px; }
-        .step-text { color:var(--secondary); font-size:10px; line-height:1.5; }
-        code { display:inline-block; max-width:100%; margin-top:5px; padding:5px 7px; border-radius:6px; background:#080b12; color:#a5f3fc; word-break:break-all; font-size:9px; }
+        .step-num { width:25px; height:25px; display:flex; align-items:center; justify-content:center; border-radius:8px; background:rgba(99,102,241,.13); color:#a5b4fc; font-size:14px; font-weight:900; margin-bottom:8px; }
+        .step-text { color:var(--secondary); font-size:14px; line-height:1.5; }
+        code { display:inline-block; max-width:100%; margin-top:5px; padding:5px 7px; border-radius:6px; background:#080b12; color:#a5f3fc; word-break:break-all; font-size:14px; }
 
         .settings-grid { margin-top:0; }
-        .outline-button { min-height:40px; padding:0 13px; border:1px solid var(--border); border-radius:10px; background:var(--surface2); color:var(--secondary); font-size:10px; font-weight:800; }
-        .danger-button { min-height:36px; padding:0 11px; border:1px solid rgba(251,113,133,.2); border-radius:10px; background:rgba(244,63,94,.07); color:#fb7185; font-size:9px; font-weight:850; }
+        .outline-button { min-height:40px; padding:0 13px; border:1px solid var(--border); border-radius:10px; background:var(--surface2); color:var(--secondary); font-size:14px; font-weight:800; }
+        .danger-button { min-height:36px; padding:0 11px; border:1px solid rgba(251,113,133,.2); border-radius:10px; background:rgba(244,63,94,.07); color:#fb7185; font-size:14px; font-weight:850; }
         .api-row { display:flex; gap:8px; }
-        .copy-button { min-width:105px; border:1px solid rgba(99,102,241,.25); border-radius:11px; background:rgba(99,102,241,.12); color:#a5b4fc; font-size:10px; font-weight:850; }
+        .copy-button { min-width:105px; border:1px solid rgba(99,102,241,.25); border-radius:11px; background:rgba(99,102,241,.12); color:#a5b4fc; font-size:14px; font-weight:850; }
 
         .review-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
         .review-panel { padding:18px; border:1px solid var(--border); border-radius:16px; background:var(--surface2); height:100%; }
         .review-head { display:flex; align-items:center; justify-content:space-between; gap:10px; }
         .review-title { font-size:12px; font-weight:900; }
-        .review-desc { margin-top:5px; color:var(--muted); font-size:10px; line-height:1.5; }
+        .review-desc { margin-top:5px; color:var(--muted); font-size:14px; line-height:1.5; }
         .review-form { margin-top:13px; display:flex; gap:8px; flex-direction:column; }
-        .mini-status { display:inline-flex; align-items:center; padding:6px 9px; border-radius:8px; font-size:9px; font-weight:850; }
+        .mini-status { display:inline-flex; align-items:center; padding:6px 9px; border-radius:8px; font-size:14px; font-weight:850; }
         @media(max-width:760px) { .review-grid { grid-template-columns:1fr; } }
 
         /* Documentation section */
@@ -349,10 +349,10 @@ foreach ($transactions as $tx) {
         .docs-content { position:relative; z-index:1; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:23px; }
         .docs-icon { width:46px; height:46px; flex:0 0 auto; display:flex; align-items:center; justify-content:center; border-radius:13px; color:#c7d2fe; background:rgba(99,102,241,.14); font-size:21px; }
         .docs-title { margin:0; font-size:15px; font-weight:900; }
-        .docs-text { margin:5px 0 0; color:var(--muted); font-size:11px; line-height:1.55; max-width:660px; }
-        .docs-link { display:inline-flex; align-items:center; gap:8px; flex:0 0 auto; padding:11px 15px; border-radius:11px; color:#fff; background:linear-gradient(135deg,#6366f1,#4f46e5); text-decoration:none; font-size:10px; font-weight:850; box-shadow:0 10px 25px rgba(79,70,229,.25); }
+        .docs-text { margin:5px 0 0; color:var(--muted); font-size:14px; line-height:1.55; max-width:660px; }
+        .docs-link { display:inline-flex; align-items:center; gap:8px; flex:0 0 auto; padding:11px 15px; border-radius:11px; color:#fff; background:linear-gradient(135deg,#6366f1,#4f46e5); text-decoration:none; font-size:14px; font-weight:850; box-shadow:0 10px 25px rgba(79,70,229,.25); }
 
-        .footer-note { margin-top:20px; color:var(--muted); text-align:center; font-size:10px; }
+        .footer-note { margin-top:20px; color:var(--muted); text-align:center; font-size:14px; }
 
         @media(max-width:1000px) {
             .layout { grid-template-columns:78px minmax(0,1fr); }
@@ -368,13 +368,13 @@ foreach ($transactions as $tx) {
             :root[data-theme="light"] .sidebar { background:rgba(255,255,255,.92); }
             .brand,.nav-label,.side-bottom { display:none; }
             .side-nav { flex-direction:row; justify-content:space-around; gap:4px; }
-            .side-link { flex:1; flex-direction:column; gap:3px; padding:8px 3px; font-size:8px; }
+            .side-link { flex:1; flex-direction:column; gap:3px; padding:8px 3px; font-size:14px; }
             .side-link span { display:block; }
             .side-link i { font-size:16px; }
             .main { padding:16px 14px 88px; }
             .topbar { margin-bottom:20px; }
             .page-title { font-size:22px; }
-            .page-description { font-size:10px; }
+            .page-description { font-size:14px; }
             .hero { border-radius:19px; padding:22px; }
             .hero-button { left:22px; right:auto; bottom:21px; }
             .stats { grid-template-columns:1fr; }
@@ -390,8 +390,10 @@ foreach ($transactions as $tx) {
             .copy-button { min-height:44px; }
         }
     </style>
+<link rel="stylesheet" href="assets/interface.css?v=20260922">
+<script src="assets/interface.js?v=20260922" defer></script>
 </head>
-<body>
+<body class="gp-panel">
 
 <div class="layout">
 
@@ -424,7 +426,7 @@ foreach ($transactions as $tx) {
                     </div>
                     <div class="ms-2 overflow-hidden">
                         <div class="fw-bold text-truncate" style="font-size:12px;"><?= htmlspecialchars($user['username']) ?></div>
-                        <div style="font-size:10px;color:var(--muted);">ID #<?= (int)$user['id'] ?></div>
+                        <div style="font-size:14px;color:var(--muted);">ID #<?= (int)$user['id'] ?></div>
                     </div>
                 </div>
             </div>
@@ -498,7 +500,7 @@ foreach ($transactions as $tx) {
                             </div>
                             <button class="primary-button" type="submit"><i class="bi bi-lightning-charge-fill me-1"></i>Создать счет</button>
                         </form>
-                        <div class="mt-3" style="color:var(--muted);font-size:10px;line-height:1.5;">
+                        <div class="mt-3" style="color:var(--muted);font-size:14px;line-height:1.5;">
                             <i class="bi bi-shield-lock me-1"></i>Все платежи проходят через защищенную систему GRAMPAY.
                         </div>
                     </div>
@@ -509,7 +511,7 @@ foreach ($transactions as $tx) {
                 <div class="card h-100">
                     <div class="card-header-custom">
                         <h2 class="card-title"><span class="title-icon"><i class="bi bi-clock-history"></i></span>Последние транзакции</h2>
-                        <span style="font-size:10px;color:var(--muted);"><?= $totalTransactions ?> записей</span>
+                        <span style="font-size:14px;color:var(--muted);"><?= $totalTransactions ?> записей</span>
                     </div>
                     <div class="transactions-wrap">
                         <table class="transactions">
@@ -559,14 +561,14 @@ foreach ($transactions as $tx) {
                 <?php if ($isVerified): ?>
                     <div class="verification-box success">
                         <strong><i class="bi bi-check-circle me-1"></i>Домен подтвержден</strong>
-                        <div class="mt-2" style="font-size:11px;color:var(--secondary);">
+                        <div class="mt-2" style="font-size:14px;color:var(--secondary);">
                             <?= htmlspecialchars($verifiedDomain) ?> успешно прошел проверку. Доступ к API разрешен.
                         </div>
                     </div>
                 <?php else: ?>
                     <div class="verification-box">
                         <strong><i class="bi bi-exclamation-circle me-1"></i>API-запросы пока заблокированы</strong>
-                        <p class="mt-2 mb-0" style="color:var(--muted);font-size:11px;line-height:1.55;">
+                        <p class="mt-2 mb-0" style="color:var(--muted);font-size:14px;line-height:1.55;">
                             Подтвердите владение сайтом, чтобы открыть возможность создания счетов через API.
                         </p>
 
@@ -619,7 +621,7 @@ foreach ($transactions as $tx) {
                             <input type="text" id="apiKeyField" class="form-control font-monospace" value="<?= htmlspecialchars($apiKey) ?>" readonly>
                             <button class="copy-button" type="button" onclick="copyKey()"><i class="bi bi-copy me-1"></i>Копировать</button>
                         </div>
-                        <div class="mt-2" style="color:var(--muted);font-size:10px;"><i class="bi bi-lock-fill me-1"></i>Никому не передавайте этот ключ.</div>
+                        <div class="mt-2" style="color:var(--muted);font-size:14px;"><i class="bi bi-lock-fill me-1"></i>Никому не передавайте этот ключ.</div>
                     </div>
                 </div>
             </div>
@@ -629,7 +631,7 @@ foreach ($transactions as $tx) {
             <div class="card-header-custom">
                 <div>
                     <h2 class="card-title"><span class="title-icon"><i class="bi bi-clipboard2-check"></i></span>Подключение и проверка</h2>
-                    <div style="margin-top:5px;color:var(--muted);font-size:10px;">Администратор проверяет сайт или Telegram-бота. Для бота подтверждение домена не требуется.</div>
+                    <div style="margin-top:5px;color:var(--muted);font-size:14px;">Администратор проверяет сайт или Telegram-бота. Для бота подтверждение домена не требуется.</div>
                 </div>
             </div>
             <div class="card-body-custom">
@@ -640,7 +642,7 @@ foreach ($transactions as $tx) {
                             <span class="mini-status <?= $websiteApprovalStatus === 'approved' ? 'status-paid' : ($websiteApprovalStatus === 'rejected' ? 'status-failed' : '') ?>" style="<?= $websiteApprovalStatus === 'pending' ? 'background:rgba(251,191,36,.1);color:#fbbf24;border:1px solid rgba(251,191,36,.2);' : '' ?>"><?= $websiteApprovalStatus === 'approved' ? 'ОДОБРЕНО' : ($websiteApprovalStatus === 'rejected' ? 'ОТКЛОНЕНО' : ($websiteApprovalStatus === 'pending' ? 'НА ПРОВЕРКЕ' : 'НЕ ПОДАНО')) ?></span>
                         </div>
                         <div class="review-desc">Сайт проходит обычную проверку владения и отдельное решение администратора.</div>
-                        <?php if ($websiteApprovalReason): ?><div style="margin-top:10px;font-size:10px;color:var(--secondary);"><b>Причина:</b> <?= nl2br(htmlspecialchars($websiteApprovalReason)) ?></div><?php endif; ?>
+                        <?php if ($websiteApprovalReason): ?><div style="margin-top:10px;font-size:14px;color:var(--secondary);"><b>Причина:</b> <?= nl2br(htmlspecialchars($websiteApprovalReason)) ?></div><?php endif; ?>
                         <form action="submit_review.php" method="POST" class="review-form">
                             <input type="hidden" name="type" value="website">
                             <input type="url" name="target" class="form-control" placeholder="https://example.com" value="<?= htmlspecialchars((string)($myWebsiteRequest['domain'] ?? '')) ?>" required>
@@ -655,7 +657,7 @@ foreach ($transactions as $tx) {
                             <span class="mini-status <?= $botApprovalStatus === 'approved' ? 'status-paid' : ($botApprovalStatus === 'rejected' ? 'status-failed' : '') ?>" style="<?= $botApprovalStatus === 'pending' ? 'background:rgba(251,191,36,.1);color:#fbbf24;border:1px solid rgba(251,191,36,.2);' : '' ?>"><?= $botApprovalStatus === 'approved' ? 'ОДОБРЕНО' : ($botApprovalStatus === 'rejected' ? 'ОТКЛОНЕНО' : ($botApprovalStatus === 'pending' ? 'НА ПРОВЕРКЕ' : 'НЕ ПОДАНО')) ?></span>
                         </div>
                         <div class="review-desc">Бота можно зарегистрировать без верификации сайта. Укажите username бота без @.</div>
-                        <?php if ($botApprovalReason): ?><div style="margin-top:10px;font-size:10px;color:var(--secondary);"><b>Причина:</b> <?= nl2br(htmlspecialchars($botApprovalReason)) ?></div><?php endif; ?>
+                        <?php if ($botApprovalReason): ?><div style="margin-top:10px;font-size:14px;color:var(--secondary);"><b>Причина:</b> <?= nl2br(htmlspecialchars($botApprovalReason)) ?></div><?php endif; ?>
                         <form action="submit_review.php" method="POST" class="review-form">
                             <input type="hidden" name="type" value="bot">
                             <input type="text" name="target" class="form-control" placeholder="my_payment_bot" pattern="[A-Za-z0-9_]{5,32}" value="<?= htmlspecialchars((string)($myBotRequest['bot_username'] ?? '')) ?>" required>
@@ -692,7 +694,7 @@ foreach ($transactions as $tx) {
                 <div class="card-header-custom">
                     <div>
                         <h2 class="card-title"><span class="title-icon"><i class="bi bi-person-gear"></i></span>Аккаунт и безопасность</h2>
-                        <div style="margin-top:5px;color:var(--muted);font-size:10px;">Управление профилем, Email, паролем и двухфакторной защитой.</div>
+                        <div style="margin-top:5px;color:var(--muted);font-size:14px;">Управление профилем, Email, паролем и двухфакторной защитой.</div>
                     </div>
                     <?php if (!empty($user['email'])): ?>
                         <span class="status status-paid"><i class="bi bi-envelope-check me-1"></i><?= htmlspecialchars((string)$user['email']) ?></span>
@@ -713,7 +715,7 @@ foreach ($transactions as $tx) {
                         <div class="col-12 col-lg-7">
                             <div style="padding:17px;border:1px solid var(--border);border-radius:16px;background:var(--surface2);height:100%;">
                                 <div style="font-size:12px;font-weight:850;"><i class="bi bi-envelope-at me-2" style="color:#a5b4fc;"></i>Смена Email</div>
-                                <div style="margin-top:5px;color:var(--muted);font-size:10px;line-height:1.5;">Новый адрес не сохранится сразу. Сначала отправим на него одноразовый код на 10 минут.</div>
+                                <div style="margin-top:5px;color:var(--muted);font-size:14px;line-height:1.5;">Новый адрес не сохранится сразу. Сначала отправим на него одноразовый код на 10 минут.</div>
                                 <form action="request_email_change.php" method="POST" class="mt-3">
                                     <div class="d-flex gap-2 flex-column flex-sm-row">
                                         <input type="email" name="email" class="form-control" value="<?= htmlspecialchars((string)($user['email'] ?? '')) ?>" placeholder="new@example.com" autocomplete="email" required>
@@ -761,7 +763,10 @@ foreach ($transactions as $tx) {
             await navigator.clipboard.writeText(field.value);
         } catch (e) {
             field.select();
-            document.execCommand('copy');
+            if (!document.execCommand('copy')) {
+                window.gpCopyMessage(button, 'Не удалось скопировать. Скопируйте выделенный ключ вручную.');
+                return;
+            }
         }
 
         const old = button.innerHTML;
@@ -781,3 +786,4 @@ foreach ($transactions as $tx) {
 </script>
 </body>
 </html>
+

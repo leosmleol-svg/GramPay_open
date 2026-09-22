@@ -1,0 +1,134 @@
+/* Shared presentation layer for the existing PHP pages. */
+:root, :root[data-theme="dark"] {
+ color-scheme:dark;
+ --bg:#0b1020; --bg-soft:#10172a; --surface:#141d30; --surface-solid:#141d30;
+ --surface2:#1b263b; --surface-2:#1b263b; --surface3:#202e45;
+ --surface-hover:#22314b; --border:#2d3b52; --border2:#3c4c64; --border-strong:#3c4c64;
+ --text:#f3f6fc; --text-2:#c8d3e4; --secondary:#c8d3e4;
+ --muted:#a6b5cc; --muted2:#a6b5cc; --muted-2:#a6b5cc;
+ --input:#10192b; --primary:#6366f1; --primary2:#b5b9ff; --primary-dark:#4f46e5;
+ --shadow:0 16px 44px #00000020; --nav-bg:#0e1527; --focus:#b5b9ff;
+}
+:root[data-theme="light"] {
+ color-scheme:light;
+ --bg:#f1f4fa; --bg-soft:#e9eef7; --surface:#fff; --surface-solid:#fff;
+ --surface2:#eef2f8; --surface-2:#eef2f8; --surface3:#e4eaf4;
+ --surface-hover:#e8edf7; --border:#cdd6e5; --border2:#b8c5d8; --border-strong:#b8c5d8;
+ --text:#15223a; --text-2:#3d506c; --secondary:#3d506c;
+ --muted:#536681; --muted2:#536681; --muted-2:#536681;
+ --input:#fff; --primary:#4f46e5; --primary2:#4941bf; --primary-dark:#4338ca;
+ --shadow:0 16px 44px #14253c0a; --nav-bg:#fff; --focus:#4941bf;
+}
+body {background:var(--bg); color:var(--text); font-size:1rem; line-height:1.55}
+html {scroll-padding-top:7rem}
+button, input, select, textarea {font:inherit; touch-action:manipulation}
+a, button {-webkit-tap-highlight-color:transparent}
+:focus-visible {outline:3px solid var(--focus); outline-offset:4px}
+h1,h2,h3,h4 {line-height:1.15; overflow-wrap:anywhere}
+.card, .auth-card, .checkout {background:var(--surface); border-color:var(--border); box-shadow:var(--shadow); backdrop-filter:none}
+.gp-landing .glow {opacity:.22}
+.gp-landing .nav {background:var(--nav-bg); box-shadow:none}
+.gp-landing .hero h1 {font-size:clamp(2.75rem,5.8vw,4.6rem); letter-spacing:-.045em; line-height:1.08}
+.gp-landing .hero-copy {font-size:1.125rem; line-height:1.75; max-width:35rem}
+.gp-landing .hero {padding-top:72px}
+.gp-landing .checkout {transform:none; border-radius:24px; padding:28px}
+.gp-landing .float-card {background:var(--surface-solid); box-shadow:var(--shadow)}
+.gp-landing .hero-actions {gap:12px}
+.gp-landing .section-title {letter-spacing:-.03em; line-height:1.16}
+.gp-landing .section-description, .gp-landing .method-desc, .gp-landing .step-desc,
+.gp-landing .benefit-desc, .gp-landing .faq-answer {font-size:1rem; line-height:1.7}
+.gp-landing .nav-link, .gp-landing .nav-cta, .gp-landing .trust,
+.gp-landing .checkout-label, .gp-landing .checkout-lock, .gp-landing .method,
+.gp-landing .float-label {font-size:.875rem}
+.btn-primary, .btn-secondary, .nav-cta, .pay-button, .return-button, .btn,
+.primary-button, .hero-button, .docs-link {font-size:1rem; min-height:48px; font-weight:700}
+.theme-btn, .theme-button, .theme, .icon-button, .menu-btn, .btn-nav {min-height:44px; min-width:44px; font-size:.875rem}
+.form-control, .form-control-custom, .form-select-custom, input.field, select.field, textarea.field {
+ font-size:1rem; min-height:48px; color:var(--text); background-color:var(--input); border-color:var(--border);
+}
+.form-label, .form-label-custom, .label {font-size:.875rem; letter-spacing:0; text-transform:none; color:var(--secondary)}
+input::placeholder, textarea::placeholder {color:var(--muted); opacity:1}
+.gp-auth {padding:84px 20px 40px}
+.gp-auth .auth-card {max-width:460px; padding:36px; border-radius:24px}
+.gp-auth .logo {justify-content:flex-start; margin-bottom:28px}
+.gp-auth h1 {font-size:1.75rem; letter-spacing:-.03em; margin:0 0 8px}
+.gp-auth-intro {margin:0 0 28px; color:var(--muted); font-size:.875rem}
+.gp-auth .links {font-size:.875rem}
+.gp-auth .theme-btn {top:20px; right:20px}
+.gp-password {position:relative; margin-bottom:16px}
+.gp-password .form-control {margin-bottom:0; padding-right:102px}
+.gp-password-toggle {position:absolute; right:4px; top:4px; padding:7px 9px; min-height:40px; border:0; border-radius:8px; background:transparent; color:var(--focus); font-size:.875rem; cursor:pointer}
+.error, .success, .notice, .info {font-size:.875rem; line-height:1.6}
+.gp-panel .sidebar {background:var(--nav-bg); backdrop-filter:none; overflow-y:auto}
+.gp-panel .side-link {font-size:.875rem; min-height:46px; border-radius:10px}
+.gp-panel .side-link.active {background:var(--surface3); color:var(--text)}
+.gp-panel .page-title {font-size:clamp(1.6rem,3vw,2.1rem); letter-spacing:-.035em}
+.gp-panel .page-description {font-size:.875rem; margin-top:8px}
+.gp-panel .hero {background:linear-gradient(115deg,#252b68,#192a45); border:1px solid #495781; box-shadow:none}
+.gp-panel .hero .hero-label, .gp-panel .hero .hero-meta {color:#d6def7; font-size:.875rem}
+.gp-panel .hero .balance {color:#fff; font-size:clamp(2.5rem,5vw,3.5rem); letter-spacing:-.04em}
+.gp-panel .balance, .gp-panel .stat-value, .gp-checkout .amount {font-variant-numeric:tabular-nums; overflow-wrap:anywhere}
+.gp-panel .stat {background:var(--surface); box-shadow:none}
+.gp-panel .stat-label {font-size:.75rem; color:var(--muted)}
+.gp-panel .card-title {font-size:1.125rem}
+.gp-panel .card-header-custom {padding:22px 24px}
+.gp-panel .card-body-custom {padding:24px}
+.gp-panel .review-title, .gp-panel .docs-title {font-size:1rem}
+.gp-panel .review-desc, .gp-panel .docs-text, .gp-panel .mini-status,
+.gp-panel .copy-button, .gp-panel .danger-button {font-size:.875rem}
+.gp-panel .copy-button, .gp-panel .danger-button {min-height:44px}
+.gp-panel .logout-btn {display:inline-flex}
+.gp-panel table th, .gp-docs table th {font-size:.75rem; padding:14px; white-space:nowrap}
+.gp-panel table td, .gp-docs table td {font-size:.875rem; padding:15px 14px; line-height:1.6}
+.gp-table-scroll {overflow-x:auto; max-width:100%; overscroll-behavior-x:contain}
+.gp-docs .navbar {background:var(--nav-bg); gap:16px; flex-wrap:wrap}
+.gp-docs .nav-links {flex-wrap:wrap}
+.gp-docs p {font-size:1rem}
+.gp-docs .code-box {padding:58px 20px 20px}
+.gp-docs .code-box code {font-size:.875rem; line-height:1.7; overflow-wrap:anywhere}
+.gp-docs .copy-btn {font-size:.875rem; min-height:36px}
+.gp-docs .shelf {font-size:.75rem}
+.gp-account .header p, .gp-account .footer, .gp-account .nav-card,
+.gp-account .nav-card strong {font-size:.875rem}
+.gp-account .nav-card {min-height:70px}
+.gp-checkout .intro h1 {letter-spacing:-.04em; line-height:1.08}
+.gp-checkout .intro-text {font-size:1rem}
+.gp-checkout .detail-label, .gp-checkout .detail-value, .gp-checkout .method-name,
+.gp-checkout .method-title, .gp-checkout .method-right, .gp-checkout .status,
+.gp-checkout .success p, .gp-checkout .timer {font-size:.875rem}
+.gp-checkout .badge, .gp-checkout .feature, .gp-checkout .secure-mini,
+.gp-checkout .method-min, .gp-checkout .card-footer, .gp-checkout .footer,
+.gp-checkout .mono {font-size:.75rem}
+.gp-checkout .card-label {font-size:.875rem}
+.gp-checkout .amount {font-size:clamp(2.5rem,6vw,3.5rem); letter-spacing:-.04em}
+.gp-checkout .detail {gap:12px; flex-wrap:wrap}
+.gp-checkout .detail-value {max-width:100%; overflow-wrap:anywhere}
+.gp-copy-feedback {margin:8px 0; color:var(--muted); font-size:.875rem}
+.gp-copy-feedback:empty {display:none}
+[data-theme="light"] .copy-button {color:#4941bf}
+[data-theme="light"] .error {color:#a5223b}
+[data-theme="light"] .notice.success {color:#096542}
+@media(max-width:760px) {
+ .gp-landing .hero {padding:40px 0 54px}
+ .gp-landing .hero-visual {min-height:350px}
+ .gp-landing .checkout {padding:22px}
+ .gp-landing .nav-actions .theme-btn {display:inline-flex}
+ .gp-landing .nav {height:auto; min-height:64px; flex-wrap:wrap; gap:12px; padding:12px}
+ .gp-landing .nav-cta {font-size:.875rem}
+ .gp-landing .nav-links[data-open="1"] {position:absolute; top:calc(100% + 8px); left:0; right:0; display:flex; flex-direction:column; align-items:stretch; padding:10px; border:1px solid var(--border); border-radius:14px; background:var(--surface-solid); box-shadow:var(--shadow)}
+ .gp-panel .sidebar {padding:6px 10px calc(6px + env(safe-area-inset-bottom)); overflow:visible}
+ .gp-panel .side-nav {overflow-x:auto; justify-content:flex-start; padding-bottom:4px}
+ .gp-panel .side-link {flex:0 0 auto; min-width:100px; padding:8px 12px; font-size:.875rem}
+ .gp-panel .main {padding-bottom:110px}
+ .gp-panel .topbar {gap:12px; flex-wrap:wrap}
+ .gp-panel .card-header-custom, .gp-panel .card-body-custom {padding:20px}
+ .gp-docs .navbar {position:static; padding:18px}
+ .gp-docs .card {padding:22px 18px}
+ .gp-docs h4 {flex-wrap:wrap; overflow-wrap:anywhere}
+ .gp-docs .container {padding:0 12px}
+ .gp-auth .auth-card {padding:28px 22px}
+ .gp-checkout .card-footer {gap:10px; flex-wrap:wrap}
+}
+@media(prefers-reduced-motion:reduce) {
+ *,*::before,*::after {animation:none!important; transition:none!important; scroll-behavior:auto!important}
+}

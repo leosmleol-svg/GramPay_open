@@ -139,7 +139,7 @@ $accountText = $isLoggedIn ? 'Открыть панель' : 'Подключит
         .brand-text { font-size: 17px; letter-spacing: -.5px; }
         .brand-sub { display: block; color: var(--muted); font-size: 7px; letter-spacing: 1.35px; margin-top: 1px; }
         .nav-links { display: flex; align-items: center; gap: 5px; }
-        .nav-link { padding: 10px 11px; border-radius: 10px; color: var(--muted); font-size: 11px; font-weight: 700; }
+        .nav-link { padding: 10px 11px; border-radius: 10px; color: var(--muted); font-size:14px; font-weight: 700; }
         .nav-link:hover { background: var(--surface-hover); color: var(--text); }
         .nav-actions { display: flex; align-items: center; gap: 7px; }
         .theme-btn, .menu-btn {
@@ -151,7 +151,7 @@ $accountText = $isLoggedIn ? 'Открыть панель' : 'Подключит
             display: inline-flex; align-items: center; justify-content: center; gap: 7px;
             min-height: 40px; padding: 0 14px; border-radius: 11px;
             color: #fff; background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            font-size: 10px; font-weight: 800;
+            font-size:14px; font-weight: 800;
         }
 
         /* hero */
@@ -160,7 +160,7 @@ $accountText = $isLoggedIn ? 'Открыть панель' : 'Подключит
         .eyebrow {
             width: fit-content; display: inline-flex; align-items: center; gap: 8px;
             padding: 7px 10px; border: 1px solid rgba(99,102,241,.22); border-radius: 10px;
-            background: rgba(99,102,241,.07); color: #a5b4fc; font-size: 9px; font-weight: 800;
+            background: rgba(99,102,241,.07); color: #a5b4fc; font-size:14px; font-weight: 800;
             text-transform: uppercase; letter-spacing: 1.2px;
         }
         .eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px rgba(52,211,153,.09); }
@@ -170,12 +170,12 @@ $accountText = $isLoggedIn ? 'Открыть панель' : 'Подключит
         .hero-actions { display: flex; align-items: center; gap: 10px; margin-top: 29px; flex-wrap: wrap; }
         .btn-primary, .btn-secondary {
             min-height: 49px; padding: 0 17px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-            border-radius: 13px; font-size: 11px; font-weight: 800;
+            border-radius: 13px; font-size:14px; font-weight: 800;
         }
         .btn-primary { color: #fff; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); box-shadow: 0 15px 36px rgba(79,70,229,.23); }
         .btn-secondary { border: 1px solid var(--border); background: var(--surface); color: var(--text-2); }
         .btn-primary:hover, .btn-secondary:hover { transform: translateY(-2px); }
-        .trust-row { display: flex; align-items: center; gap: 16px; margin-top: 25px; color: var(--muted-2); font-size: 9px; }
+        .trust-row { display: flex; align-items: center; gap: 16px; margin-top: 25px; color: var(--muted-2); font-size:14px; }
         .trust { display: inline-flex; align-items: center; gap: 5px; }
         .trust i { color: var(--green); }
 
@@ -189,16 +189,16 @@ $accountText = $isLoggedIn ? 'Открыть панель' : 'Подключит
         }
         :root[data-theme="light"] .checkout { background: rgba(255,255,255,.91); }
         .checkout-head { display:flex; align-items:center; justify-content:space-between; padding-bottom:14px; border-bottom:1px solid var(--border); }
-        .checkout-logo { display:flex; align-items:center; gap:7px; font-size:10px; font-weight:850; }
+        .checkout-logo { display:flex; align-items:center; gap:7px; font-size:14px; font-weight:850; }
         .tiny-icon { width:25px; height:25px; display:grid; place-items:center; border-radius:7px; color:#fff; background:linear-gradient(135deg,#6366f1,#22d3ee); }
-        .checkout-lock { color: var(--green); font-size: 8px; font-weight: 750; }
-        .checkout-label { margin-top: 25px; color: var(--muted); font-size: 8px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+        .checkout-lock { color: var(--green); font-size:14px; font-weight: 750; }
+        .checkout-label { margin-top: 25px; color: var(--muted); font-size:14px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
         .checkout-price { margin-top: 4px; font-size: 45px; letter-spacing: -2px; font-weight: 900; }
         .checkout-price small { color: var(--muted); font-size: 15px; letter-spacing: 0; }
         .method-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:7px; margin-top:18px; }
-        .method { padding:11px 6px; border:1px solid var(--border); border-radius:10px; background:var(--surface-2); text-align:center; font-size:8px; font-weight:700; color:var(--text-2); }
+        .method { padding:11px 6px; border:1px solid var(--border); border-radius:10px; background:var(--surface-2); text-align:center; font-size:14px; font-weight:700; color:var(--text-2); }
         .method.active { border-color:rgba(99,102,241,.42); background:rgba(99,102,241,.11); color:#c7d2fe; }
-        .checkout-button { margin-top:11px; min-height:46px; display:grid; place-items:center; border-radius:11px; color:#fff; background:linear-gradient(135deg,#6366f1,#4f46e5); font-size:10px; font-weight:800; }
+        .checkout-button { margin-top:11px; min-height:46px; display:grid; place-items:center; border-radius:11px; color:#fff; background:linear-gradient(135deg,#6366f1,#4f46e5); font-size:14px; font-weight:800; }
         .float-card { position:absolute; padding:12px 13px; border:1px solid var(--border); border-radius:14px; background:var(--surface); backdrop-filter:blur(18px); box-shadow:0 18px 45px rgba(0,0,0,.15); }
         .float-card.one { left:-10px; bottom:70px; }
         .float-card.two { right:-15px; top:62px; }
@@ -210,7 +210,7 @@ $accountText = $isLoggedIn ? 'Открыть панель' : 'Подключит
         .section { padding: 92px 0; }
         .section.alt { background: linear-gradient(180deg, transparent, var(--bg-soft), transparent); }
         .section-head { max-width: 700px; margin-bottom: 34px; }
-        .section-kicker { color: #818cf8; font-size: 9px; font-weight: 850; text-transform: uppercase; letter-spacing: 1.4px; }
+        .section-kicker { color: #818cf8; font-size:14px; font-weight: 850; text-transform: uppercase; letter-spacing: 1.4px; }
         .section-title { margin: 9px 0 0; font-size: clamp(31px, 4vw, 49px); line-height: 1.02; letter-spacing: -2px; font-weight: 900; }
         .section-text { margin: 14px 0 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
 
@@ -220,29 +220,29 @@ $accountText = $isLoggedIn ? 'Открыть панель' : 'Подключит
         .method-card:hover { transform:translateY(-4px); border-color:var(--border-strong); background:var(--surface-hover); }
         .method-icon { width:41px; height:41px; display:grid; place-items:center; border-radius:12px; background:rgba(99,102,241,.11); color:#a5b4fc; font-size:19px; }
         .method-card h3 { margin:17px 0 0; font-size:14px; }
-        .method-card p { margin:7px 0 0; color:var(--muted); font-size:10px; line-height:1.6; }
-        .method-note { margin-top:14px; color:#818cf8; font-size:9px; font-weight:750; }
+        .method-card p { margin:7px 0 0; color:var(--muted); font-size:14px; line-height:1.6; }
+        .method-note { margin-top:14px; color:#818cf8; font-size:14px; font-weight:750; }
 
         /* benefits */
         .benefits { display:grid; grid-template-columns:1.1fr .9fr; gap:15px; }
         .benefit-big, .benefit { border:1px solid var(--border); border-radius:20px; background:var(--surface); }
         .benefit-big { min-height:365px; padding:28px; position:relative; overflow:hidden; }
         .benefit-big::after { content:""; position:absolute; width:310px; height:310px; right:-150px; bottom:-170px; border-radius:50%; background:radial-gradient(circle,rgba(99,102,241,.18),transparent 69%); }
-        .benefit-number { color:#a5b4fc; font-size:9px; font-weight:850; letter-spacing:1px; }
+        .benefit-number { color:#a5b4fc; font-size:14px; font-weight:850; letter-spacing:1px; }
         .benefit-big h3 { max-width:550px; margin:15px 0 0; font-size:29px; letter-spacing:-1.1px; }
         .benefit-big p { max-width:540px; color:var(--muted); font-size:12px; line-height:1.7; }
         .benefit-mini-grid { display:grid; grid-template-columns:1fr 1fr; gap:15px; }
         .benefit { padding:21px; }
         .benefit i { color:#a5b4fc; font-size:20px; }
         .benefit h4 { margin:15px 0 0; font-size:13px; }
-        .benefit p { margin:6px 0 0; color:var(--muted); font-size:10px; line-height:1.55; }
+        .benefit p { margin:6px 0 0; color:var(--muted); font-size:14px; line-height:1.55; }
 
         /* api */
         .api-box { position:relative; overflow:hidden; display:grid; grid-template-columns:1fr 1fr; gap:15px; padding:26px; border:1px solid rgba(99,102,241,.22); border-radius:22px; background:linear-gradient(135deg,rgba(99,102,241,.09),rgba(34,211,238,.025)),var(--surface); }
         .api-copy h3 { margin:9px 0 0; font-size:30px; letter-spacing:-1.3px; }
         .api-copy p { max-width:500px; color:var(--muted); font-size:12px; line-height:1.7; }
         .api-points { display:grid; gap:8px; margin-top:19px; }
-        .api-point { display:flex; align-items:center; gap:8px; color:var(--text-2); font-size:10px; font-weight:650; }
+        .api-point { display:flex; align-items:center; gap:8px; color:var(--text-2); font-size:14px; font-weight:650; }
         .api-point i { color:var(--green); }
         .code-window { min-height:300px; padding:17px; border:1px solid var(--border); border-radius:16px; background:#060911; color:#cbd5e1; font:10px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace; box-shadow:inset 0 0 40px rgba(0,0,0,.2); overflow:auto; }
         .code-dim { color:#64748b; }
@@ -254,25 +254,25 @@ $accountText = $isLoggedIn ? 'Открыть панель' : 'Подключит
         .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
         .step { padding:23px; border:1px solid var(--border); border-radius:18px; background:var(--surface); }
         .step-top { display:flex; align-items:center; justify-content:space-between; }
-        .step-no { width:34px; height:34px; display:grid; place-items:center; border-radius:10px; background:rgba(99,102,241,.12); color:#a5b4fc; font-size:10px; font-weight:900; }
+        .step-no { width:34px; height:34px; display:grid; place-items:center; border-radius:10px; background:rgba(99,102,241,.12); color:#a5b4fc; font-size:14px; font-weight:900; }
         .step i { color:var(--muted-2); }
         .step h3 { margin:19px 0 0; font-size:14px; }
-        .step p { margin:7px 0 0; color:var(--muted); font-size:10px; line-height:1.65; }
+        .step p { margin:7px 0 0; color:var(--muted); font-size:14px; line-height:1.65; }
 
         /* stats */
         .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
         .stat { padding:22px; border-top:1px solid var(--border); border-bottom:1px solid var(--border); text-align:center; }
         .stat-value { font-size:31px; font-weight:900; letter-spacing:-1px; }
-        .stat-label { margin-top:5px; color:var(--muted); font-size:9px; font-weight:750; }
+        .stat-label { margin-top:5px; color:var(--muted); font-size:14px; font-weight:750; }
 
         /* faq */
         .faq { max-width:860px; display:grid; gap:8px; }
         details { border:1px solid var(--border); border-radius:14px; background:var(--surface); overflow:hidden; }
-        summary { list-style:none; cursor:pointer; padding:17px 18px; display:flex; align-items:center; justify-content:space-between; gap:15px; font-size:11px; font-weight:800; }
+        summary { list-style:none; cursor:pointer; padding:17px 18px; display:flex; align-items:center; justify-content:space-between; gap:15px; font-size:14px; font-weight:800; }
         summary::-webkit-details-marker { display:none; }
         summary::after { content:'+'; color:var(--muted); font-size:16px; }
         details[open] summary::after { content:'−'; color:#a5b4fc; }
-        details p { margin:0; padding:0 18px 18px; color:var(--muted); font-size:10px; line-height:1.65; }
+        details p { margin:0; padding:0 18px 18px; color:var(--muted); font-size:14px; line-height:1.65; }
 
         /* CTA */
         .cta { padding:70px 0 100px; }
@@ -285,9 +285,9 @@ $accountText = $isLoggedIn ? 'Открыть панель' : 'Подключит
         /* footer */
         footer { padding:26px 0 35px; border-top:1px solid var(--border); }
         .footer-row { display:flex; align-items:center; justify-content:space-between; gap:20px; }
-        .footer-copy { color:var(--muted-2); font-size:9px; }
+        .footer-copy { color:var(--muted-2); font-size:14px; }
         .footer-links { display:flex; gap:15px; }
-        .footer-links a { color:var(--muted); font-size:9px; }
+        .footer-links a { color:var(--muted); font-size:14px; }
         .footer-links a:hover { color:var(--text); }
 
         /* responsive */
@@ -325,7 +325,7 @@ $accountText = $isLoggedIn ? 'Открыть панель' : 'Подключит
         @media (max-width: 460px) {
             .container { width:calc(100% - 18px); }
             .brand-sub { display:none; }
-            .nav-cta { font-size:9px; }
+            .nav-cta { font-size:14px; }
             .hero-actions { flex-direction:column; align-items:stretch; }
             .btn-primary, .btn-secondary { width:100%; }
             .trust-row { flex-wrap:wrap; gap:8px 13px; }
@@ -341,7 +341,7 @@ $accountText = $isLoggedIn ? 'Открыть панель' : 'Подключит
             .benefit-mini-grid { grid-template-columns:1fr; }
             .api-box { padding:18px; }
             .api-copy h3 { font-size:25px; }
-            .code-window { min-height:260px; font-size:9px; }
+            .code-window { min-height:260px; font-size:14px; }
             .stats { gap:7px; }
             .stat { padding:16px 8px; }
             .stat-value { font-size:25px; }
@@ -349,8 +349,10 @@ $accountText = $isLoggedIn ? 'Открыть панель' : 'Подключит
     </style>
 
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"GRAMPAY","url":"https://grampay.net/","description":"Платёжная платформа для сайтов, приложений и ботов."}</script>
+<link rel="stylesheet" href="assets/interface.css?v=20260922">
+<script src="assets/interface.js?v=20260922" defer></script>
 </head>
-<body>
+<body class="gp-landing">
 <div class="page">
     <div class="bg">
         <div class="grid"></div>
@@ -370,7 +372,7 @@ $accountText = $isLoggedIn ? 'Открыть панель' : 'Подключит
                     </span>
                 </a>
 
-                <div class="nav-links">
+                <div class="nav-links" id="main-nav">
                     <a class="nav-link" href="#payments">Платежи</a>
                     <a class="nav-link" href="#advantages">Преимущества</a>
                     <a class="nav-link" href="#api">API</a>
@@ -383,7 +385,7 @@ $accountText = $isLoggedIn ? 'Открыть панель' : 'Подключит
                     <button class="theme-btn" type="button" onclick="toggleTheme()" aria-label="Сменить тему">
                         <i id="themeIcon" class="bi bi-sun-fill"></i>
                     </button>
-                    <button class="menu-btn" type="button" onclick="toggleMobileMenu()" aria-label="Меню">
+                    <button class="menu-btn" type="button" onclick="toggleMobileMenu()" aria-label="Меню" aria-controls="main-nav" aria-expanded="false">
                         <i class="bi bi-list"></i>
                     </button>
                     <a class="nav-cta" href="<?= htmlspecialchars($accountUrl, ENT_QUOTES) ?>">
@@ -695,29 +697,16 @@ $accountText = $isLoggedIn ? 'Открыть панель' : 'Подключит
 
     function toggleMobileMenu() {
         const links = document.querySelector('.nav-links');
-        if (!links) return;
-        const opened = links.dataset.open === '1';
-        if (opened) {
-            links.dataset.open = '0';
-            links.style.display = '';
-        } else {
-            links.dataset.open = '1';
-            links.style.display = 'flex';
-            links.style.position = 'absolute';
-            links.style.top = '70px';
-            links.style.left = '0';
-            links.style.right = '0';
-            links.style.flexDirection = 'column';
-            links.style.alignItems = 'stretch';
-            links.style.padding = '8px';
-            links.style.border = '1px solid var(--border)';
-            links.style.borderRadius = '14px';
-            links.style.background = 'var(--surface-solid)';
-            links.style.boxShadow = 'var(--shadow)';
-        }
+        const button = document.querySelector('.menu-btn');
+        if (!links || !button) return;
+        const opened = links.dataset.open !== '1';
+        links.dataset.open = opened ? '1' : '0';
+        button.setAttribute('aria-expanded', String(opened));
     }
+
 
     updateThemeIcon(document.documentElement.getAttribute('data-theme'));
 </script>
 </body>
 </html>
+

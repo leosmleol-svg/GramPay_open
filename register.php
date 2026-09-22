@@ -87,30 +87,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .auth-card { width:100%; max-width:400px; padding:40px 30px; border:1px solid var(--border); border-radius:24px; background:var(--surface); backdrop-filter:blur(25px); box-shadow:0 30px 80px rgba(0,0,0,.24); }
         .logo { display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:30px; font-size:20px; font-weight:900; }
         .logo-icon { width:42px; height:42px; display:flex; align-items:center; justify-content:center; border-radius:13px; color:#fff; background:linear-gradient(135deg,#6366f1,#22d3ee); }
-        .form-label { display:block; margin-bottom:8px; font-size:10px; font-weight:800; color:var(--muted); text-transform:uppercase; letter-spacing:1px; }
+        .form-label { display:block; margin-bottom:8px; font-size:14px; font-weight:800; color:var(--muted); text-transform:uppercase; letter-spacing:1px; }
         .form-control { width:100%; min-height:48px; margin-bottom:16px; padding:0 16px; border:1px solid var(--border); border-radius:12px; background:var(--input); color:var(--text); outline:none; transition:.2s; }
         .form-control:focus { border-color:rgba(99,102,241,.65); box-shadow:0 0 0 4px rgba(99,102,241,.09); }
         .captcha-wrap { margin: 4px 0 10px; overflow: hidden; border-radius: 12px; }
         .btn-primary { width:100%; min-height:48px; border:0; border-radius:12px; background:linear-gradient(135deg,#6366f1,#4f46e5); color:#fff; font-size:12px; font-weight:800; cursor:pointer; margin-top:10px; box-shadow:0 12px 28px rgba(79,70,229,.27); transition:.2s; }
         .btn-primary:hover { transform:translateY(-2px); box-shadow:0 15px 35px rgba(79,70,229,.35); }
-        .error { background:rgba(244,63,94,.09); border:1px solid rgba(244,63,94,.17); color:#fda4af; padding:12px; border-radius:12px; font-size:11px; margin-bottom:20px; text-align:center; }
-        .links { margin-top:24px; text-align:center; font-size:11px; color:var(--muted); }
+        .error { background:rgba(244,63,94,.09); border:1px solid rgba(244,63,94,.17); color:#fda4af; padding:12px; border-radius:12px; font-size:14px; margin-bottom:20px; text-align:center; }
+        .links { margin-top:24px; text-align:center; font-size:14px; color:var(--muted); }
         .links a { color:var(--text); text-decoration:none; font-weight:700; }
-        .theme-btn { position:absolute; top:20px; right:20px; background:var(--surface); border:1px solid var(--border); color:var(--muted); padding:8px 12px; border-radius:10px; cursor:pointer; font-size:10px; font-weight:800; }
+        .theme-btn { position:absolute; top:20px; right:20px; background:var(--surface); border:1px solid var(--border); color:var(--muted); padding:8px 12px; border-radius:10px; cursor:pointer; font-size:14px; font-weight:800; }
     </style>
+<link rel="stylesheet" href="assets/interface.css?v=20260922">
+<script src="assets/interface.js?v=20260922" defer></script>
 </head>
-<body>
+<body class="gp-auth">
     <button class="theme-btn" onclick="toggleTheme()">🌓 ТЕМА</button>
     <div class="auth-card">
         <div class="logo"><div class="logo-icon">⚡</div>GRAMPAY</div>
-        <?php if ($error !== ''): ?><div class="error"><?= htmlspecialchars($error) ?></div><?php endif; ?>
+        <?php if ($error !== ''): ?><div class="error" role="alert"><?= htmlspecialchars($error) ?></div><?php endif; ?>
+        <h1>Создать аккаунт</h1><p class="gp-auth-intro">Зарегистрируйтесь для работы с платежами.</p>
         <form method="POST">
             <label class="form-label">Ваш Логин</label>
-            <input type="text" name="username" class="form-control" placeholder="Придумайте логин" required autofocus>
+            <input type="text" name="username" id="username" autocomplete="username" class="form-control" placeholder="Придумайте логин" required autofocus>
             <label class="form-label">Email</label>
-            <input type="email" name="email" class="form-control" placeholder="name@domain.com" required>
+            <input type="email" name="email" id="email" autocomplete="email" class="form-control" placeholder="name@domain.com" required>
             <label class="form-label">Пароль</label>
-            <input type="password" name="password" class="form-control" placeholder="Мин. 6 символов" required>
+            <input type="password" name="password" id="password" autocomplete="new-password" class="form-control" placeholder="Мин. 6 символов" required>
             <div class="captcha-wrap">
                 <div
                     style="height: 100px"

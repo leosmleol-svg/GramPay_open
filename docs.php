@@ -28,33 +28,35 @@ $apiKey = !empty($user['api_key']) ? $user['api_key'] : 'gp_sec_ВАШ_КЛЮЧ'
         
         .container { max-width:900px; margin:40px auto; padding:0 20px; }
         .card { background:var(--surface); border:1px solid var(--border); border-radius:20px; padding:30px; margin-bottom:24px; backdrop-filter:blur(25px); box-shadow:0 25px 70px rgba(0,0,0,.16); }
-        .shelf { font-size:10px; font-weight:800; color:#38bdf8; text-transform:uppercase; letter-spacing:1px; margin-bottom:5px; }
+        .shelf { font-size:14px; font-weight:800; color:#38bdf8; text-transform:uppercase; letter-spacing:1px; margin-bottom:5px; }
         h1, h4 { margin:0 0 15px 0; }
         h4 { display:flex; align-items:center; gap:10px; font-size:18px; font-weight:800; }
         p { color:var(--muted); font-size:13px; line-height:1.6; margin:0 0 15px 0; }
         
-        .badge { font-family:monospace; font-size:11px; padding:4px 8px; border-radius:8px; font-weight:800; }
+        .badge { font-family:monospace; font-size:14px; padding:4px 8px; border-radius:8px; font-weight:800; }
         .badge.post { background:rgba(34,197,94,.15); color:#4ade80; border:1px solid rgba(34,197,94,.3); }
         .badge.get { background:rgba(56,189,248,.15); color:#38bdf8; border:1px solid rgba(56,189,248,.3); }
 
         .table-wrap { border:1px solid var(--border); border-radius:12px; overflow:hidden; margin-bottom:20px; }
         table { width:100%; border-collapse:collapse; text-align:left; }
         th, td { padding:12px 15px; border-bottom:1px solid var(--border); font-size:12px; }
-        th { background:rgba(0,0,0,.1); color:var(--muted); font-size:10px; text-transform:uppercase; font-weight:800; }
+        th { background:rgba(0,0,0,.1); color:var(--muted); font-size:14px; text-transform:uppercase; font-weight:800; }
         td code { font-family:monospace; color:#a5b4fc; background:rgba(99,102,241,.1); padding:2px 6px; border-radius:4px; }
         
         .code-box { position:relative; background:var(--code-bg); border:1px solid var(--border); border-radius:12px; padding:16px; margin-bottom:20px; overflow-x:auto; }
         .code-box code { font-family:monospace; font-size:13px; color:var(--code-color); white-space:pre-wrap; }
-        .copy-btn { position:absolute; top:10px; right:10px; background:rgba(255,255,255,.1); border:1px solid var(--border); color:var(--text); padding:5px 10px; font-size:10px; border-radius:6px; cursor:pointer; font-weight:700; }
+        .copy-btn { position:absolute; top:10px; right:10px; background:rgba(255,255,255,.1); border:1px solid var(--border); color:var(--text); padding:5px 10px; font-size:14px; border-radius:6px; cursor:pointer; font-weight:700; }
         .copy-btn:hover { background:rgba(255,255,255,.2); }
     </style>
+<link rel="stylesheet" href="assets/interface.css?v=20260922">
+<script src="assets/interface.js?v=20260922" defer></script>
 </head>
-<body>
+<body class="gp-docs">
     <nav class="navbar">
         <a href="index.php" class="logo">⚡ GRAMPAY API</a>
         <div class="nav-links">
             <button class="btn-nav" onclick="toggleTheme()">🌓 Тема</button>
-            <a href="index.php" class="btn-nav">Личный кабинет</a>
+            <a href="panel.php" class="btn-nav">Личный кабинет</a>
         </div>
     </nav>
 
@@ -78,7 +80,7 @@ $apiKey = !empty($user['api_key']) ? $user['api_key'] : 'gp_sec_ВАШ_КЛЮЧ'
                     </tbody>
                 </table>
             </div>
-            <p style="font-size:11px;">* Минимальная сумма платежа: <strong>1 RUB</strong>. API доступен после подачи заявки; проверка сайта не является обязательным условием для Telegram-бота.</p>
+            <p style="font-size:14px;">* Минимальная сумма платежа: <strong>1 RUB</strong>. API доступен после подачи заявки; проверка сайта не является обязательным условием для Telegram-бота.</p>
         </div>
 
         <!-- Создание платежа -->
