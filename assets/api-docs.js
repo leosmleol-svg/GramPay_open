@@ -6,6 +6,11 @@
   const search = document.querySelector('#search');
   const sidebar = document.querySelector('#sidebar');
   const menu = document.querySelector('#menu');
+  const header = document.querySelector('.topbar');
+  const updateHeaderHeight = () => document.documentElement.style.setProperty('--header-height', header.getBoundingClientRect().height + 'px');
+  updateHeaderHeight();
+  if (typeof ResizeObserver !== 'undefined') new ResizeObserver(updateHeaderHeight).observe(header);
+  else window.addEventListener('resize', updateHeaderHeight);
   let timer;
   const notify = message => {
     clearTimeout(timer);
