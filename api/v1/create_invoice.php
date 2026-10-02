@@ -49,6 +49,13 @@ if (!$merchant) {
     apiResponse(['ok' => false, 'error' => 'Invalid API key'], 401);
 }
 
+$amount = filter_var($input['amount'] ?? null, FILTER_VALIDATE_INT);
+if ($amount === false || $amount < 1) {
+    apiResponse(['ok' => false, 'error' => 'Invalid amount. Minimum is 1 RUB'], 400);
+}
+
+$paymentMethod = (int)($input['payment_method'] ?? 2);
+
 // API НЕ зависит от проверки сайта и решения модерации.
 // Idempotency: repeated requests with the same key return the existing invoice
 // instead of creating a second payment.
@@ -59,6 +66,21 @@ if ($idempotencyKey !== '') {
     }
     $existing = findTransactionByIdempotencyKey((int)$merchant['id'], $idempotencyKey);
     if ($existing) {
+        $conflicts = [];
+        if ((int)$existing['amount'] !== $amount) $conflicts[] = 'amount';
+        if ((int)$existing['payment_method'] !== $paymentMethod) $conflicts[] = 'payment_method';
+        if ($conflicts) {
+            apiResponse([
+                'ok' => false,
+                'error' => 'Idempotency key already used with different payment parameters',
+                'code' => 'IDEMPOTENCY_CONFLICT',
+                'message' => 'Для нового счёта используйте новый Idempotency-Key. Для повтора сохраните исходную сумму и способ оплаты.',
+                'conflicting_fields' => $conflicts,
+                'invoice_id' => $existing['transaction_id'],
+                'existing_amount' => (int)$existing['amount'],
+                'requested_amount' => $amount,
+            ], 409);
+        }
         $paymentUrl = 'https://grampay.net/pay_wait.php?tx=' . rawurlencode((string)$existing['transaction_id']);
         $oldRedirect = (string)($existing['redirect_url'] ?? '');
         if ($oldRedirect !== '') {
@@ -83,13 +105,7 @@ if ($idempotencyKey !== '') {
     }
 }
 
-$amount = filter_var($input['amount'] ?? null, FILTER_VALIDATE_INT);
-if ($amount === false || $amount < 1) {
-    apiResponse(['ok' => false, 'error' => 'Invalid amount. Minimum is 1 RUB'], 400);
-}
-
 $config = require __DIR__ . '/../../config.php';
-$paymentMethod = (int)($input['payment_method'] ?? 2);
 if (!isset($config['payment_methods'][$paymentMethod])) {
     apiResponse(['ok' => false, 'error' => 'Invalid payment method'], 400);
 }

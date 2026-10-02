@@ -14,11 +14,15 @@ jobs:
           persist-credentials: false
       - name: Check PHP syntax
         run: |
+          php -l api/v1/create_invoice.php
+          php -l tests/invoice_idempotency_test.php
           php -l docs.php
           php -l email_service.php
           php -l config/mail.example.php
           php -l tools/check-mail.php
           php -l tests/smtp_test.php
+      - name: Test invoice replay and price conflicts
+        run: php tests/invoice_idempotency_test.php
       - name: Test SMTP against local mock only
         run: php tests/smtp_test.php
       - name: Check documentation JavaScript
